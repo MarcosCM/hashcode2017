@@ -1,8 +1,8 @@
 import operator
 FILE_IN = 'kittens.in'
-FILE_IN = 'me_at_the_zoo.in'
-FILE_IN = 'trending_today.in'
-FILE_IN = 'videos_worth_spreading.in'
+#FILE_IN = 'me_at_the_zoo.in'
+#FILE_IN = 'trending_today.in'
+#FILE_IN = 'videos_worth_spreading.in'
 
 f = open(FILE_IN, 'r')
 
@@ -116,7 +116,8 @@ if __name__ == "__main__":
     for i, j in endpoint.items():
         min_ = minLate(ep[i])
         for k, l in j.items():
-            insert(min_, k, l)
+            for y in range(0, int(problem_desc_arr[3])):
+                insert(int(y), k, l)
     sort_()
     top()
     output()
