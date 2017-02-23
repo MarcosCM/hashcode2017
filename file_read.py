@@ -116,8 +116,8 @@ if __name__ == "__main__":
     for i, j in endpoint.items():
         min_ = minLate(ep[i])
         for k, l in j.items():
-            for y in range(0, int(problem_desc_arr[3])):
-                insert(int(y), k, l)
+            for y,_ in ep[i]['caches'].items():
+                insert(y, k, l)
     sort_()
     top()
     output()
